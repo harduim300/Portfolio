@@ -1,0 +1,198 @@
+.BannerContainer {
+    background-image: url("/bannerMatheusPortfolio.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    filter: grayscale(0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BannerContentFlex {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.BannerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.myName {
+    font-size: 180px;
+    font-family: var(--name-font);
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: 3px 3px black;
+}
+
+.myProfession {
+    font-family: var(--profession-font);
+    text-transform: uppercase;
+    text-shadow: 1px 1px black;
+    font-size: 50px;
+    position: relative;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    overflow: hidden; /* Garante que o texto esconda o que ainda não foi "escrito" */
+}
+
+.textAnimate {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor {
+    position: relative;
+    animation: blinkCursor 0.75s step-end infinite;
+    color: white;
+    margin-left: 2px;
+    border-left: solid 16px white;
+    box-shadow: 1px 1px black;
+}
+
+.mySentence {
+    font-size: 30px;
+    text-shadow: 1px 1px black;
+    background-color: #ff5757;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.mouseScrollIndication{
+    margin-bottom: 25px;
+    color: white;
+    animation: mouseIndication .8s infinite;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+.icon_mouse {
+
+    font-size: 25px;
+    
+}
+
+.arrow_mouse{
+    animation: jumpArrow .8s infinite;
+}
+
+@keyframes jumpArrow {
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-15%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-left-color: transparent;
+        box-shadow: none;
+        
+    }
+}
+
+@keyframes mouseIndication {
+    50% {
+        opacity: 0.2;
+    }
+}
+
+
+
+
+@media screen and (max-width: 1368px) {
+    .myName {
+        font-size: 150px;
+    }
+    .myProfession{
+        font-size: 35px;
+
+    }
+    .mySentence{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .myName {
+        font-size: 110px;
+    }
+    .myProfession{
+        font-size: 30px;
+    }
+    .mySentence{
+        font-size: 22px;
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .myName {
+        font-size: 90px;
+    }
+    .myProfession{
+        font-size: 25px;
+        white-space: normal;
+        width: 80vw;
+    }
+    .mySentence{
+        font-size: 22px;
+    }
+    .textAnimate {
+        white-space: normal;
+    }
+    .icon_mouse {
+    
+        font-size: 20px;
+        
+    }
+}
+
+@media screen and (max-width: 640px) and (orientation: landscape){
+    .myName {
+        font-size: 60px;
+    }
+    .myProfession{
+        font-size: 20px;
+    }
+    .mySentence{
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-width: 569px) {
+    .BannerContent{
+        margin-top: 25px;
+    }
+    .myProfession {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .myName {
+        font-size: 60px;
+    }
+    .myProfession{
+        font-size: 20px;
+    }
+    .mySentence{
+        font-size: 16px;
+    }
+}

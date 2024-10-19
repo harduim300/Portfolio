@@ -1,0 +1,14 @@
+:root {
+
+    --name-font: "Great Vibes", cursive;
+    --profession-font: "Orbitron", sans-serif;
+}
+
+body {
+    top: 0;
+    margin: 0;
+    
+    h1 {
+        margin: 0;
+    }
+}
