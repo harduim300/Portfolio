@@ -14,12 +14,13 @@ function App() {
     <>
       <Header/>
       <Banner/>
-      <SecundaryBanner/>
+      <h1>Em breve!!</h1>
+      {/* <SecundaryBanner/>
       <AboutMe/>
       <RedirectContact/>
       <ProjectWork/>
       <EmailContact/>
-      <Footer/>
+      <Footer/> */}
     </>
   )
 }
