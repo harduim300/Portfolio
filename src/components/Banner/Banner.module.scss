@@ -9,6 +9,12 @@
     align-items: center;
 }
 
+@supports (height: 100dvh) {
+    .BannerContainer {
+        height: 100dvh; /* Use 100dvh onde suportado */
+    }
+}
+
 .BannerContentFlex {
     height: 100%;
     width: 100%;
