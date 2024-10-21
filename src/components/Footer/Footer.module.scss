@@ -1,0 +1,60 @@
+footer {
+    border-top: solid 2px #751d25;
+    background-color: black;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerContainerFlexTop{
+    display: flex;
+    margin: 35px;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    border-bottom: solid 1px #751d25;
+    padding-bottom: 15px;
+}
+
+.footerContainerFlexBottom {
+    margin-bottom: 50px;
+    a {
+        color: white;
+        margin: 0 25px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
+
+.footerSocialMedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.flexIcons {
+    margin-top: 15px;
+}
+
+.socialMediaIcons {
+    font-size: 35px;
+    margin: 0 10px;
+}
+
+.madeByMH {
+    background: #751d25;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}

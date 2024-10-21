@@ -1,0 +1,64 @@
+.AboutMeContainer{
+    background-color: #751d25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.AboutMeBoxBoard {
+    position: relative;
+    background: white;
+    width: 50%;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 15px 15px black;
+    animation: none;
+}
+
+.AboutMeIntro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textAboutMe {
+    width: 30%;
+}
+
+.AMITextIntro {
+    width: 70%;
+    text-align: center;
+}
+
+
+.AboutMeFlexContent {
+    display: flex;
+    justify-content: space-around;
+}
+.textAMDescription {
+    width: 100%;
+}
+
+@keyframes bouncingAnimationDiv {
+    0% {
+        transform: translateY(250px) scale(0.5, 0.5); /* Estado inicial sem deformação */
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(-150px) scale(1.1, 0.9); /* Aumenta em largura e comprime em altura no pico */
+    }
+    50% {
+        transform: translateY(0) scale(0.9, 1.5); /* Deformação ao tocar o chão, esticando verticalmente */
+    }
+    75% {
+        transform: translateY(-75px) scale(1.05, 0.95); /* Subida menor com leve deformação */
+    }
+    100% {
+        transform: translateX(0px);
+        transform: translateY(0) scale(1, 1); /* Volta ao estado normal */
+        opacity: 1;
+    }
+}
