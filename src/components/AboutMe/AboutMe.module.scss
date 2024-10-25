@@ -34,11 +34,64 @@
 
 
 .AboutMeFlexContent {
+    text-align: center;
     display: flex;
     justify-content: space-around;
 }
 .textAMDescription {
     width: 100%;
+}
+
+.mySkillBoard {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mySkillBoardCards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    
+}
+
+.AboutMeCard {
+    background-color: #751d25;
+    display: flex;
+    width: 150px;
+    height: 50px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    transition: all ease 0.5s;
+}
+.AboutMeCard:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: blue;
+    animation: jumping 0.5s infinite;
+}
+
+@keyframes jumping {
+    0% {
+        transform: translateY(0px);
+
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+    
+    100% {
+        transform: translateY(-2px);
+    }
 }
 
 @keyframes bouncingAnimationDiv {

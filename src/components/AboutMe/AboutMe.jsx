@@ -7,6 +7,8 @@ const AboutMeSkillCard = ({NameSkill}) => (
     </div>
 );
 
+const nameMySkills = ['html','css','javascript', 'react', 'angular', 'arduino', 'php', 'django', 'SQL', 'Laravel', 'Git/Github', 'python', 'C++', 'SCSS']
+
 const AboutMe = () => {
     const aboutMeRef = useRef(null); // Usar useRef para referenciar a div
 
@@ -62,6 +64,11 @@ const AboutMe = () => {
                         </div>
                         <div className={style.mySkillBoard}>
                             <h2>Minhas Skills</h2>
+                            <div className={style.mySkillBoardCards}>
+                                {nameMySkills.map((nameMySkill, key) => (
+                                    <AboutMeSkillCard key={key} NameSkill={nameMySkill}/>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
