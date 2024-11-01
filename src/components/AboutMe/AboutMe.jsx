@@ -1,5 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React  from 'react';
 import style from './AboutMe.module.scss';
+import animationDev from '/src/assets/AnimationDev.json';
+import Lottie from 'react-lottie-player';
+import { FaCss3Alt } from "react-icons/fa";
+import { TiHtml5 } from "react-icons/ti";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaAngular } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { DiDjango } from "react-icons/di";
+import { FaGithub } from "react-icons/fa";
+import { SiArduino } from "react-icons/si";
+import { SiPhp } from "react-icons/si";
+import fotoPerfil from "/perfil.png"
 
 const AboutMeSkillCard = ({NameSkill}) => (
     <div className={style.AboutMeCard}>
@@ -7,42 +20,16 @@ const AboutMeSkillCard = ({NameSkill}) => (
     </div>
 );
 
-const nameMySkills = ['html','css','javascript', 'react', 'angular', 'arduino', 'php', 'django', 'SQL', 'Laravel', 'Git/Github', 'python', 'C++', 'SCSS']
 
 const AboutMe = () => {
-    const aboutMeRef = useRef(null); // Usar useRef para referenciar a div
-
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Adiciona a animação quando a div estiver visível
-                    entry.target.style.animation = `${style.bouncingAnimationDiv} 2s ease-in-out`;
-                } else {
-                    // Remove a animação quando a div não estiver visível
-                    entry.target.style.animation = 'none';
-                }
-            });
-        }, {
-            threshold: 0.5 // Quando 10% da div estiver visível
-        });
-
-        if (aboutMeRef.current) {
-            observer.observe(aboutMeRef.current);
-        }
-
-        return () => {
-            if (aboutMeRef.current) {
-                observer.unobserve(aboutMeRef.current);
-            }
-        };
-    }, []);
+    
 
     return (
         <section id="aboutMe" className={style.AboutMeContainer}>
-            <div ref={aboutMeRef} className={style.AboutMeBoxBoard}>
+            <div className={style.AboutMeBoxBoard}>
                 <div className={style.AboutMeFlex}>
                     <div className={style.AboutMeIntro}>
+                        <img src={fotoPerfil} alt="matheusPerfil" className={style.imgPerfil}/>
                         <div>
                             <h1>Sobre mim</h1>
                         </div>
@@ -65,13 +52,28 @@ const AboutMe = () => {
                         <div className={style.mySkillBoard}>
                             <h2>Minhas Skills</h2>
                             <div className={style.mySkillBoardCards}>
-                                {nameMySkills.map((nameMySkill, key) => (
-                                    <AboutMeSkillCard key={key} NameSkill={nameMySkill}/>
-                                ))}
+                                <TiHtml5 style={{fontSize: '80px', color: '#e5532d'}}/>
+                                <FaCss3Alt style={{fontSize: '60px', color: '#2d53e5', paddingTop: '18px'}}/>
+                                <IoLogoJavascript style={{fontSize: '60px', color: '#f7e025', paddingTop: '15px'}}/>
+                                <FaReact style={{fontSize: '60px', color: '#65dafb', paddingTop: '15px'}}/>
+                                <FaAngular style={{fontSize: '60px', color: '#de0837', paddingTop: '15px'}}/>
+                                <FaPython style={{fontSize: '60px', color: '#48c2fb', paddingTop: '15px'}}/>
+                                <FaGithub style={{fontSize: '50px', color: '#FFF', paddingTop: '20px'}}/>
+                                <DiDjango style={{fontSize: '80px', color: '#113527', paddingTop: '8px'}}/>
+                                <SiArduino style={{fontSize: '80px', color: '#089aa0', paddingTop: '8px'}}/>
+                                <SiPhp style={{fontSize: '80px', color: '#7b7fb5', paddingTop: '8px'}}/>
                             </div>
+                            <h3>Palavras-chave:<br/> HTML5, CSS, JAVASCRIPT, REACT, ANGULAR, PYTHON, GIT/GITHUB, DJANGO, ARDUINO, PHP</h3>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className={style.animationDev}>
+            <Lottie
+                loop
+                animationData={animationDev}
+                play
+            />
             </div>
         </section>
     );

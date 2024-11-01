@@ -1,7 +1,23 @@
+@font-face {
+    font-family: 'Traducer Variable';
+    src: url('/src/assets/TransducerTest-Black-BF645c3dd71b125.otf') format('opentype'); /* Ajuste o caminho */
+    font-weight: 100 900; /* Define a variável para vários pesos */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Degular Variable';
+    src: url('/src/assets/DegularVariable.ttf') format('truetype'); /* Ajuste o caminho */
+    font-weight: 100 900; /* Define a variável para vários pesos */
+    font-style: normal;
+}
+
 :root {
 
     --name-font: "Great Vibes", cursive;
     --profession-font: "Orbitron", sans-serif;
+    --title-font: 'Traducer Variable', sans-serif;
+    --text-font: 'Degular Variable', sans-serif;
 }
 
 body {

@@ -3,17 +3,50 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    overflow: hidden;
+    font-family: var(--text-font);
+    padding-bottom: 50px;
+
+}
+
+.AboutMeIntro {
+    h1 {
+        margin: 25px 0;
+        font-size: 55px;
+        font-family: var(--title-font);
+        font-weight: 100;
+        position: relative; /* Necessário para posicionar o pseudo-elemento */
+        text-align: center;
+    }
+
+    h1::after {
+        content: "";
+        display: block;
+        width: 120px; /* Ajuste a largura da borda aqui */
+        height: 8px;
+        background-color: #751d25;
+        margin: -10px auto; /* Centraliza a borda */
+        position: absolute;
+        border-radius: 15px;
+        bottom: -5px; /* Ajuste a posição vertical se necessário */
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .AboutMeBoxBoard {
     position: relative;
-    background: white;
-    width: 50%;
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 15px 15px black;
+    background: black;
+    color: white;
+    width: 100%;
+    height: auto;
     animation: none;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 15px 0px;
 }
 
 .AboutMeIntro {
@@ -23,8 +56,17 @@
     align-items: center;
 }
 
+.imgPerfil{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10%;
+    object-position: top center;
+
+}
+
 .textAboutMe {
-    width: 30%;
+    width: 40%;
 }
 
 .AMITextIntro {
@@ -37,16 +79,21 @@
     text-align: center;
     display: flex;
     justify-content: space-around;
+    h2 {
+        font-family: var(--title-font);
+        font-size: 30px;
+    }
 }
 .textAMDescription {
     width: 100%;
+    font-size: 25px;
 }
 
 .mySkillBoard {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    justify-content: space-between;
+    width: 35%;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -55,7 +102,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
     justify-content: center;
     
 }
@@ -77,6 +124,12 @@
     transform: scale(1.1);
     background-color: blue;
     animation: jumping 0.5s infinite;
+}
+
+.animationDev {
+    width: 30%;
+    height: 50%; 
+    z-index: 25;
 }
 
 @keyframes jumping {
