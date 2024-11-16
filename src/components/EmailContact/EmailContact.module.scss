@@ -1,0 +1,83 @@
+.email_form_container {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #751d25;
+    padding: 15px 0;
+}
+
+.email_form_content {
+    display: flex;
+    padding: 50px 0;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    color: white;
+    width: 60%;
+    border-radius: 15px 15px;
+}
+
+
+.email_form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.email_form_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-family: var(--title-font);
+    .email_title_border {
+        margin-top: 10px;
+        height: 8px;
+        width: 120px;
+        background-color: #751d25;
+        border-radius: 15px;
+    }
+}
+
+
+.input_field, .textarea_field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #292424;
+    border-radius: 8px;
+    background-color: #191212;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+.textarea_field {
+    height: 100px;
+    resize: none;
+}
+
+.input_field::placeholder, .textarea_field::placeholder {
+    color: #918184;
+    font-size: 12px;
+}
+
+.submit_button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 60%;
+    background-color: #751d25;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit_button:hover {
+    background-color: #5a101c;
+}

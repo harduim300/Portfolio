@@ -19,8 +19,8 @@ function App() {
       <h1>Em breve!!!</h1>
       {/* 
       <RedirectContact/>
-      <ProjectWork/>
-      <EmailContact/> */}
+      <ProjectWork/> */}
+      <EmailContact/>
       <Footer/>
     </>
   )
