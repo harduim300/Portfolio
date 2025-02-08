@@ -1,0 +1,42 @@
+.ProjectWork {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    padding-bottom: 50px;
+    height: 100vh;
+    background: var(--primary-color);
+    h2 {
+        margin: 0;
+    }
+}
+
+.ProjectWorkContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px 0px 0px 15px;
+    padding: 50px 0;
+    background: #000;
+    color: white;
+    width: 75%;
+    .ProjectWorkTitle{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            margin: 20px 0;
+            font-size: 30px;
+            font-family: var(--title-font);
+        }
+    
+        .inf_bar {
+        content: "";
+        display: block;
+        width: 120px; /* Ajuste a largura da borda aqui */
+        height: 8px;
+        background-color: #751d25;
+        border-radius: 15px;
+        }
+    }
+}

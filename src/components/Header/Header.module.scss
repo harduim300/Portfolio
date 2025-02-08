@@ -8,14 +8,43 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    opacity: 0.5;
+    background-color: var(--header-color);
 }
 
 .headerContainer{
-    opacity: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     color: white;
     z-index: 15;
+    h1{
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: var(--title-font);
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+    gap: 10px;
+}
+
+.logoPerfil {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 0px -3px;
+}
+
+.headerNav {
+    color: white;
+    list-style: none;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 640px) and (orientation: landscape){

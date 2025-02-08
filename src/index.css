@@ -18,6 +18,8 @@
     --profession-font: "Orbitron", sans-serif;
     --title-font: 'Traducer Variable', sans-serif;
     --text-font: 'Degular Variable', sans-serif;
+    --primary-color: #751d25;
+    --header-color: #00000080;
 }
 
 body {

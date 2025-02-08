@@ -15,11 +15,8 @@ function App() {
       <Header/>
       <Banner/>
       <AboutMe/>
-      {/* <SecundaryBanner/> */}
-      <h1>Em breve!!!</h1>
-      {/* 
-      <RedirectContact/>
-      <ProjectWork/> */}
+      <SecundaryBanner/>
+      <ProjectWork/> 
       <EmailContact/>
       <Footer/>
     </>
