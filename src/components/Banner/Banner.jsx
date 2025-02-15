@@ -49,7 +49,7 @@ const Banner = () => {
     }, [displayedText, isDeleting, typingSpeed, currentWordIndex]);
 
     return (
-        <section className={style.BannerContainer}>
+        <section id='home-main' className={style.BannerContainer}>
             <div className={style.BannerContentFlex}>
                 <div className={style.BannerContent}>
                     <h1 className={style.myName}>

@@ -25,7 +25,7 @@ const AboutMe = () => {
     
 
     return (
-        <section id="aboutMe" className={style.AboutMeContainer}>
+        <section id="about-me" className={style.AboutMeContainer}>
             <div className={style.AboutMeBoxBoard}>
                 <div className={style.AboutMeFlex}>
                     <div className={style.AboutMeIntro}>

@@ -41,11 +41,39 @@ header {
     object-position: 0px -3px;
 }
 
-.headerNav {
-    color: white;
-    list-style: none;
-    text-decoration: none;
-}
+.menu_nav {
+    .menu_list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      margin: 0 25px;
+  
+      li {
+        button {
+          font-weight: bolder;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 20px;
+          color: white;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+  
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+  
+      span {
+        color: white;
+      }
+    }
+  }
 
 @media screen and (max-width: 640px) and (orientation: landscape){
     header {

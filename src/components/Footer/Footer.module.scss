@@ -26,6 +26,9 @@ footer {
 }
 
 .footerContainerFlexBottom {
+    width: 70%;
+    display: flex;
+    justify-content: center;
     margin-bottom: 50px;
     a {
         color: white;
@@ -48,6 +51,9 @@ footer {
 }
 
 .socialMediaIcons {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
     font-size: 35px;
     margin: 0 10px;
 }
@@ -58,3 +64,37 @@ footer {
     justify-content: center;
     padding: 10px;
 }
+
+.menu_nav {
+    .menu_list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+  
+      li {
+        button {
+          font-weight: bolder;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          font-size: 20px;
+          color: white;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+  
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+  
+      span {
+        color: white;
+      }
+    }
+  }
+  
