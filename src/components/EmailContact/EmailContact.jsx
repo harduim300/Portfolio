@@ -1,9 +1,10 @@
 import style from './EmailContact.module.scss'
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 
 const EmailContact = () => {
+  const recaptchaRef = useRef(null);
   const [captchaValue, setCaptchaValue] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -11,6 +12,13 @@ const EmailContact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false); // Estado para controle do botão
+
+  const resetRecaptcha = () => {
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+      setCaptchaValue(null);
+    }
+  };
 
   const handleRecaptchaChange = (value) => {
     setCaptchaValue(value);
@@ -102,11 +110,22 @@ const EmailContact = () => {
           theme: "dark",
           transition: Bounce,
         });
-        setCaptchaValue(null);
+        resetRecaptcha();
+
       }
     } catch (error) {
       console.error('Error submitting the form:', error);
-      alert('Error sending message. Please try again later.');
+      toast.error(`Erro ao enviar email: ${result.error || 'Unknown error'}. Por favor tente novamente mais tarde !`, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
     } finally {
       setIsSubmitting(false); // Reabilita o botão de envio
     }
@@ -161,6 +180,7 @@ const EmailContact = () => {
           ></textarea>
           <div className={style.recaptcha_placeholder}>
             <ReCAPTCHA
+              ref={recaptchaRef}
               sitekey="6LdK6NoqAAAAAF_P59K6NAtSY2LZB6d8XkWgwPay"
               onChange={handleRecaptchaChange}
             />
