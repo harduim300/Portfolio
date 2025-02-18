@@ -75,8 +75,26 @@ header {
     }
   }
 
+  .menu_mobile {
+    display: none;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .menu_nav {
+      display: none;
+    }
+  
+    .menu_mobile {
+      display: flex;
+      align-items: center;
+      margin-right: 25px;
+    }
+  }
+  
+
 @media screen and (max-width: 640px) and (orientation: landscape){
     header {
-        height: 50px;
+        height: 65px;
     }
 }
