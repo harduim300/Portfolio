@@ -5,6 +5,7 @@ import Lottie from 'react-lottie-player';
 import agreement from '/src/assets/agreement.json';
 import thinking from '/src/assets/thinking.json';
 import { motion } from 'framer-motion';
+import { acessouContato, acessouProjetos } from '../../../metaTracking';
 
 const SecundaryBanner = () => {
   return (
@@ -27,7 +28,9 @@ const SecundaryBanner = () => {
             se encaixe com a oportunidade entre em contato!
           </p>
           <button
-            onClick={() => scrollToId('email-form')}
+            onClick={() => {
+              acessouContato()
+              scrollToId('email-form')}}
             className={style.btnSecundaryBanner}
           >
             Contato
@@ -40,12 +43,15 @@ const SecundaryBanner = () => {
             <Lottie loop animationData={thinking} play />
           </div>
           <p>
-            Caso queira conhecer mais sobre mim, logo abaixo é apresentado o
-            projeto do qual faço parte, como também um pequeno projeto que fiz,
+            Caso queira conhecer mais sobre mim, logo abaixo é apresentado os
+            projetos dos quais fiz parte, como também um pequeno projeto que fiz,
             ressaltando que mais pode ser encontrado no Github.
           </p>
           <button
-            onClick={() => scrollToId('projects')}
+            onClick={() => {
+              acessouProjetos()
+              scrollToId('projects')}
+            }
             className={style.btnSecundaryBanner}
           >
             Ver Projetos

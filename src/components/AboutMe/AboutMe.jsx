@@ -43,10 +43,18 @@ const AboutMe = () => {
                             Conhecendo me melhor
                             </h2>
                             <p className={style.textAMDescription}>
-                            Eu sou um estudante Bacharel que possui conhecimentos de Desenvolvimento Web Full-Stack, 
-                            como também uso de sistemas embarcados por meio da utilização de microcontroladores. 
-                            Além disso, tenho conhecimentos por meio das cadeiras eletivas da Universidade 
-                            em Modelagem e Simulação de Reservatórios de Petróleo como também em Inteligencia Artificial.
+                            Graduando em Engenharia de Computação pela Universidade do Estado do Rio de Janeiro (UERJ), 
+                            atuei como estagiário em Desenvolvimento Full-Stack na MAP – Assessoria em Marketplaces, 
+                            com foco na criação e manutenção de aplicações web utilizando as 
+                            tecnologias <strong>HTML</strong>, <strong>SCSS</strong>, <strong>JavaScript</strong>, <strong>Typescript</strong>, <strong>React</strong>, 
+                            <strong> Next.js</strong>, <strong>Tailwind</strong>,  
+                            <strong> Express.js</strong> e <strong >Node.js</strong>. Além disso, fui bolsista 
+                            de iniciação científica pela UERJ, 
+                            tendo recebido menção honrosa na 32ª Semana de Iniciação Científica em 2023, pelo 
+                            desenvolvimento de um projeto voltado a estações meteorológicas, no qual utilizei 
+                             <strong style={{'marginLeft': 10}}>PHP</strong>, <strong>Arduino</strong>, <strong>Laravel</strong>, <strong>HTML</strong>,
+                             <strong> CSS</strong> e <strong>JavaScript</strong>. Possuo fluência em inglês e busco 
+                             constantemente aprimorar minhas habilidades linguísticas e técnicas.
                             </p>
                         </div>
                         <div className={style.mySkillBoard}>

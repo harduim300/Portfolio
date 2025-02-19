@@ -1,0 +1,78 @@
+.cookie_consent_container_flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cookie_consent {
+    margin: 10px 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #1f1f1f;
+    width: 90%;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 10;
+    border: solid 1px rgb(58, 53, 53);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 5px 5px;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  
+    .cookie_consent_button_accept {
+      background-color: var(--primary-color); // verde para aceitar
+      color: #fff;
+    }
+  
+    .cookie_consent_button_decline {
+      background-color: black; // vermelho para recusar
+      color: #fff;
+    }
+  
+    .cookie_consent_link {
+      margin: 0px 0px 0px 5px;
+      color: white;
+      font-weight: bold;
+      text-decoration: underline;
+  
+      &:hover {
+        color: #00bcd4; // cor do link quando hover
+      }
+    }
+  }
+
+@media screen and (max-width: 768px) {
+  .cookie_consent {
+    width: 80%;
+    p {
+      font-size: 10px;
+      text-align: justify;
+    }
+    .btn_space_mobile {
+      margin: 0px 0px 0px 25px;
+    }
+  }
+  
+}
+  

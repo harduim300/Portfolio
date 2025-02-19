@@ -130,7 +130,6 @@
 .animationDev {
     width: 30%;
     height: 50%; 
-    z-index: 25;
 }
 
 @keyframes jumping {
@@ -167,5 +166,46 @@
         transform: translateX(0px);
         transform: translateY(0) scale(1, 1); /* Volta ao estado normal */
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .animationDev {
+        display: none;
+    }
+    .AboutMeContainer{
+        justify-content: flex-start;
+    }
+    .AboutMeBoxBoard {
+        width: 93%;
+    }
+    .AboutMeFlexContent {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .textAboutMe {
+        width: 80%;
+    }
+    .mySkillBoard {
+        width: 80%;
+    }
+    .imgPerfil{
+        width: 250px;
+        height: 250px;
+    }
+    .AboutMeIntro {
+        h1 {
+            font-size: 40px;
+        }
+    }
+    .textAMDescription {
+        font-size: 20px;
+    }
+    .AMITextIntro {
+        h2 {
+            font-size: 22px;
+        }
     }
 }

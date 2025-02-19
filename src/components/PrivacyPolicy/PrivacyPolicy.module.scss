@@ -1,0 +1,29 @@
+.privacyPolicy {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.privacyPolicyContainer {
+    width: 80%;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    margin: 85px 0 50px 0;
+    h1 {
+        text-align: center;
+        font-family: var(--title-font);
+        font-size: 40px;
+    }
+}
+
+.privacyPolicyContent {
+    margin: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .privacyPolicyContainer {
+        width: 95%;
+    }
+    
+}

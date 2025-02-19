@@ -81,3 +81,17 @@
 .submit_button:hover {
     background-color: #5a101c;
 }
+
+@media screen and (max-width: 854px) {
+    .email_form_content {
+        width: 90%;
+        text-align: center;
+        h1 {
+
+            font-size: 30px;    
+        }
+    }
+    .email_form {
+        width: 80%;
+    }
+}

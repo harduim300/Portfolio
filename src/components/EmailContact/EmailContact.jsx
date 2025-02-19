@@ -2,6 +2,7 @@ import style from './EmailContact.module.scss'
 import React, { useState, useRef } from "react";
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
+import { contatoEnviouEmail, preencheuEmail, preencheuMensagem, preencheuNome } from '../../../metaTracking';
 
 const EmailContact = () => {
   const recaptchaRef = useRef(null);
@@ -155,27 +156,30 @@ const EmailContact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Enter your name"
+            placeholder="Digite seu nome..."
             required
             value={formData.name}
             onChange={handleInputChange}
+            onClick={preencheuNome}
             className={style.input_field}
           />
           <input
             type="email"
             name="email"
-            placeholder="Enter your email"
+            placeholder="Digite seu email..."
             required
             value={formData.email}
             onChange={handleInputChange}
+            onClick={preencheuEmail}
             className={style.input_field}
           />
           <textarea
             name="message"
-            placeholder="Write your message..."
+            placeholder="Escreva aqui sua mensagem..."
             required
             value={formData.message}
             onChange={handleInputChange}
+            onClick={preencheuMensagem}
             className={style.textarea_field}
           ></textarea>
           <div className={style.recaptcha_placeholder}>
@@ -186,6 +190,7 @@ const EmailContact = () => {
             />
           </div>
           <button 
+            onClick={contatoEnviouEmail}
             type="submit" 
             className={style.submit_button} 
             disabled={isSubmitting} // Desabilita o botão enquanto o envio está em progresso

@@ -9,6 +9,8 @@ header {
     justify-content: center;
     align-items: center;
     background-color: var(--header-color);
+    z-index: 10;
+
 }
 
 .headerContainer{
@@ -18,7 +20,6 @@ header {
     flex-direction: row;
     align-items: center;
     color: white;
-    z-index: 15;
     h1{
         font-size: 40px;
         font-weight: bolder;
@@ -34,10 +35,9 @@ header {
 }
 
 .logoPerfil {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 140px;
+    height: auto;
+    object-fit: contain;
     object-position: 0px -3px;
 }
 
