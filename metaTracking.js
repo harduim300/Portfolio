@@ -25,7 +25,7 @@ async function sendEventToAPIConversion(event_name, custom_data) {
     const event_source_url = window.location.href;  // URL da página atual
 
     try {
-        const response = await axios.post('http://localhost:3000/api/track-event-meta/', {
+        const response = await axios.post('https://harduim-backend-portfolio.vercel.app/api/track-event-meta/', {
             event_name: event_name,
             user_data: user_data,
             custom_data: custom_data,

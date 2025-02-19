@@ -60,16 +60,16 @@ const AboutMe = () => {
                         <div className={style.mySkillBoard}>
                             <h2>Minhas Skills</h2>
                             <div className={style.mySkillBoardCards}>
-                                <TiHtml5 style={{fontSize: '80px', color: '#e5532d'}}/>
-                                <FaCss3Alt style={{fontSize: '60px', color: '#2d53e5', paddingTop: '18px'}}/>
-                                <IoLogoJavascript style={{fontSize: '60px', color: '#f7e025', paddingTop: '15px'}}/>
-                                <FaReact style={{fontSize: '60px', color: '#65dafb', paddingTop: '15px'}}/>
-                                <FaAngular style={{fontSize: '60px', color: '#de0837', paddingTop: '15px'}}/>
-                                <FaPython style={{fontSize: '60px', color: '#48c2fb', paddingTop: '15px'}}/>
-                                <FaGithub style={{fontSize: '50px', color: '#FFF', paddingTop: '20px'}}/>
-                                <DiDjango style={{fontSize: '80px', color: '#113527', paddingTop: '8px'}}/>
-                                <SiArduino style={{fontSize: '80px', color: '#089aa0', paddingTop: '8px'}}/>
-                                <SiPhp style={{fontSize: '80px', color: '#7b7fb5', paddingTop: '8px'}}/>
+                                <TiHtml5 style={{color: '#e5532d'}} className={style.iconsTec} />
+                                <FaCss3Alt  style={{color: '#2d53e5'}} className={style.iconsTec} />
+                                <IoLogoJavascript style={{color: '#f7e025'}} className={style.iconsTec} />
+                                <FaReact style={{color: '#65dafb'}} className={style.iconsTec} />
+                                <FaAngular style={{color: '#de0837'}} className={style.iconsTec} />
+                                <FaPython style={{color: '#48c2fb'}} className={style.iconsTec} />
+                                <FaGithub style={{color: 'ffffff'}} className={style.iconsTec} />
+                                <DiDjango style={{color: '#113527'}} className={style.iconsTec} />
+                                <SiArduino style={{color: '#089aa0'}} className={style.iconsTec} />
+                                <SiPhp style={{color: '#7b7fb5'}} className={style.iconsTec} />
                             </div>
                             <h3>Palavras-chave:<br/> HTML5, CSS, JAVASCRIPT, REACT, ANGULAR, PYTHON, GIT/GITHUB, DJANGO, ARDUINO, PHP</h3>
                         </div>

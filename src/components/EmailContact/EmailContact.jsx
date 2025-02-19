@@ -54,7 +54,7 @@ const EmailContact = () => {
     setIsSubmitting(true); // Desabilita o botão de envio
 
     // 1. Primeiro verifica o reCAPTCHA no backend
-    const recaptchaResponse = await fetch('http://localhost:3000/api/verify-recaptcha', {
+    const recaptchaResponse = await fetch('https://harduim-backend-portfolio.vercel.app/api/verify-recaptcha', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token: captchaValue }),
@@ -70,7 +70,7 @@ const EmailContact = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/sendEmail', {
+      const response = await fetch('https://harduim-backend-portfolio.vercel.app/api/sendEmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
