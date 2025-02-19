@@ -54,7 +54,7 @@ const CookieConsent = () => {
         <div className={style.cookie_consent}>
         <p>
             Esse site utiliza cookies para melhorar a sua experiência. Ao continuar navegando, você aceita nossa  
-            <a href="http://localhost:5173/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className={style.cookie_consent_link}>
+            <a href="https://matheus-harduim-portfolio.vercel.app/politica-de-privacidade" target="_blank" rel="noopener noreferrer" className={style.cookie_consent_link}>
             política de cookies
             </a>.
         </p>
