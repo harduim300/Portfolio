@@ -1,0 +1,17 @@
+{
+    "headers": [
+      {
+        "source": "/(.*)"
+      }
+    ],
+    "rewrites": [
+      { "source": "/", "destination": "/" },
+      { "source": "/politica-de-privacidade", "destination": "/politica-de-privacidade" },
+      { "source": "/(.*)", "destination": "/index.html" }
+    ],
+    "build": {
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
