@@ -1,9 +1,5 @@
 {
-    "headers": [
-      {
-        "source": "/(.*)"
-      }
-    ],
+    "version": 2,
     "rewrites": [
       { "source": "/", "destination": "/" },
       { "source": "/politica-de-privacidade", "destination": "/politica-de-privacidade" },
