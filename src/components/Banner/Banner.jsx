@@ -14,49 +14,40 @@ const Banner = () => {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
-    const [typingSpeed, setTypingSpeed] = useState(100); // Velocidade inicial de escrita
+    const typingSpeed = isDeleting ? 50 : 100; // Velocidade de digitação e apagamento
 
     useEffect(() => {
-        let typingTimeout;
         const currentWord = words[currentWordIndex];
 
-        const handleTyping = () => {
-            if (!isDeleting) {
-                // Escrevendo a palavra
-                setDisplayedText(currentWord.slice(0, displayedText.length + 1));
-                setTypingSpeed(100); // Velocidade de digitação normal
-                if (displayedText === currentWord) {
-                    // Pausa ao terminar de escrever a palavra
-                    setTimeout(() => setIsDeleting(true), 2000); // Pausa de 2 segundos com a palavra completa
-                }
-            } else {
-                // Apagando a palavra
-                setDisplayedText(currentWord.slice(0, displayedText.length - 1));
-                setTypingSpeed(50); // Aumenta a velocidade de apagamento
-                if (displayedText === '') {
-                    // Troca para a próxima palavra e começa a escrever novamente
-                    setIsDeleting(false);
-                    setDisplayedText("")
-                    setCurrentWordIndex((prev) => (prev + 1) % words.length);
-                }
-            }
-        };
+        if (!isDeleting && displayedText === currentWord) {
+            setTimeout(() => setIsDeleting(true), 2000); // Pausa de 2 segundos após digitar
+            return;
+        }
 
-        // Timeout que controla a velocidade da digitação
-        typingTimeout = setTimeout(handleTyping, typingSpeed);
+        if (isDeleting && displayedText === '') {
+            setIsDeleting(false);
+            setCurrentWordIndex((prev) => (prev + 1) % words.length);
+            return;
+        }
 
-        return () => clearTimeout(typingTimeout); // Limpa o timeout ao desmontar o componente
-    }, [displayedText, isDeleting, typingSpeed, currentWordIndex]);
+        const typingTimeout = setTimeout(() => {
+            setDisplayedText((prev) =>
+                isDeleting ? prev.slice(0, -1) : currentWord.slice(0, prev.length + 1)
+            );
+        }, typingSpeed);
+
+        return () => clearTimeout(typingTimeout);
+    }, [displayedText, isDeleting, currentWordIndex]);
 
     return (
         <section id='home-main' className={style.BannerContainer}>
             <div className={style.BannerContentFlex}>
                 <div className={style.BannerContent}>
-                    <h1 className={style.myName}>
+                    <h1 className={style.myName} translate="no">
                         Matheus <span style={{ margin: 15 }} />Harduim
                     </h1>
                     <h2 className={style.myProfession}>
-                        <span className={style.textAnimate}>./{displayedText}</span>
+                        <span className={style.textAnimate} translate="no">./{displayedText}</span>
                         <span className={style.cursor}></span>
                     </h2>
                     <h3 className={style.mySentence}>“Aprendendo todos os dias, evoluindo em cada projeto! ”.</h3>
